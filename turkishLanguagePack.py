@@ -35,6 +35,9 @@ def yazdir(input_value=None):
     if input_value is not None:
         print(input_value)
 
+def girdi(input_value=None):
+    if input_value is not None:
+        return input(input_value)
 
 def aralik(start, stop, step=1):
     if step == 0:
@@ -63,23 +66,11 @@ def eger(koşul, işlem, else_işlem=None):
 
 
 def enBuyuk(iterable):
-    if len(iterable) == 0:
-        raise ValueError("Iterable boş olamaz.")
-    max_value = iterable[0]
-    for item in iterable:
-        if item > max_value:
-            max_value = item
-    return max_value
+    return max(iterable)
 
 
 def enKucuk(iterable):
-    if len(iterable) == 0:
-        raise ValueError("Iterable boş olamaz.")
-    min_value = iterable[0]
-    for item in iterable:
-        if item < min_value:
-            min_value = item
-    return min_value
+    return min(iterable)
 
 
 def oldukca(iterable, islem):
@@ -90,3 +81,37 @@ def oldukca(iterable, islem):
             islem(item)
         except StopIteration:
             break
+
+
+def ac(file, mode):
+    if mode == "y":
+        mode = "w"
+    elif mode == "o":
+        mode = "r"
+    elif mode == "e":
+        mode = "a"
+    return open(file, mode)
+
+
+def kapat(file):
+    file.close()
+
+
+def oku(file):
+    return file.read()
+
+
+def dene(condition, exception_handler=None):
+    def func():
+        try:
+            condition()
+        except Exception as err:
+            if exception_handler is None:
+                yazdir("Hata yakalandı:" + str(err))
+            elif exception_handler == 0:
+                pass
+            else:
+                exception_handler()
+
+    func()
+

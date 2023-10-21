@@ -12,6 +12,11 @@ yazdir(benimOndalikli * benimTamSayi)
 yazdir("İstanbul not Constantinople")
 yazdir()
 
+# Input function
+# a = girdi("Bir şeyler gir ")  # enter something
+# yazdir(a)
+
+yazdir("\n###\n")
 # for Function
 her(aralik(1, 6), yazdir)
 
@@ -64,3 +69,38 @@ en_kucuk = enKucuk(benimListe)
 
 yazdir("En büyük değer: " + dizgi(en_buyuk))
 yazdir("En küçük değer: " + dizgi(en_kucuk))
+yazdir("\n")
+
+# file reading and writing
+# "o" (okuma) = "r" (read) | "y" (yazma) = "w" (write) | "e" (ekleme) = "a" (append)
+dosya = ac("deneme.txt", "o")
+
+yazdir(oku(dosya))
+kapat(dosya)
+
+
+# Exception Handling
+
+def hata1():
+    ac("soganOglan.txt", "o")
+
+
+dene(hata1)
+
+
+def hata2():
+    yazdir(1 / 0)
+
+
+dene(hata2)
+
+
+def hataDurumundaYap():
+    yazdir("Kardeşim kodu yanliş yazmışsın")
+
+
+dene(hata1, hataDurumundaYap)
+
+dene(hata1, 0)  # hata durumunda none dönmesi için 0 yazabilirsiniz
+
+yazdir("\n#######\n")
