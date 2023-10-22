@@ -1,3 +1,7 @@
+import random
+from time import sleep
+
+
 def tamSayi(input_value):
     try:
         return int(input_value)
@@ -35,9 +39,11 @@ def yazdir(input_value=None):
     if input_value is not None:
         print(input_value)
 
+
 def girdi(input_value=None):
     if input_value is not None:
         return input(input_value)
+
 
 def aralik(start, stop, step=1):
     if step == 0:
@@ -115,3 +121,46 @@ def dene(condition, exception_handler=None):
 
     func()
 
+
+def uyu(saniye):
+    sleep(saniye)
+
+
+def say(deger):
+    return len(deger)
+
+
+def rastgeleTamSayi(a, b):
+    return random.randint(a, b)
+
+
+def rastgele():
+    return random.random()
+
+
+def rastgeleSec(listeYaDaDeger):
+    return random.choice(listeYaDaDeger)
+
+
+def kaldir(liste, deger):
+    return liste.remove(deger)
+
+
+def ekle(liste, sira, deger):
+    return liste.insert(sira, deger)
+
+
+def temizle(liste):
+    return liste.clear()
+
+
+def sirala(liste):
+    return liste.sort()
+
+
+def topla(*args):
+    return sum(args)
+
+
+def yerineKoy(string, metinIlk, yeniMetin):
+    return string.replace(metinIlk, yeniMetin)

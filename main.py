@@ -104,3 +104,45 @@ dene(hata1, hataDurumundaYap)
 dene(hata1, 0)  # hata durumunda none dönmesi için 0 yazabilirsiniz
 
 yazdir("\n#######\n")
+
+# Sleep
+uyu(0.5)
+
+# Len || Say
+yazdir(say(benimListe))
+yazdir(say("Merhaba"))
+
+# Random || Rastgele
+
+yazdir(rastgele())
+yazdir(rastgeleTamSayi(1, 5))
+yazdir(rastgeleSec(["t", "e", "s", "t", ]))
+
+# Kaldır || Remove
+
+yazdir(benimListe)
+kaldir(benimListe, benimListe[0])
+yazdir(benimListe)
+
+# Ekle || add
+
+ekle(benimListe, 0, 31)
+yazdir(benimListe)
+
+# Temizle || Clear
+
+benimListe.clear()
+yazdir(benimListe)
+
+# Sırala || Sort
+
+benimListe = [5, 12, 9, 3, 21, 7]
+sirala(benimListe)
+yazdir(benimListe)
+
+# topla || sum
+
+yazdir(topla(1, 2, 3, 4, 5))
+
+yerineKoyTest = "Ümit Davala"
+yazdir(yerineKoy(yerineKoyTest, "Davala", "Özdağ"))
