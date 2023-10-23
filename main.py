@@ -146,3 +146,5 @@ yazdir(topla(1, 2, 3, 4, 5))
 
 yerineKoyTest = "Ümit Davala"
 yazdir(yerineKoy(yerineKoyTest, "Davala", "Özdağ"))
+
+ilkDeger=girdi("Lütfen 1. sayıyı giriniz")
